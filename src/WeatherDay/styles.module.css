@@ -1,0 +1,8 @@
+.main{
+    display: flex;
+}
+.main input, .main button{
+    padding: 8px;
+    border-radius: 3px;
+    margin: 5px;
+}

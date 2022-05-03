@@ -1,23 +1,159 @@
-/* *{
-    border: 0;
-} */
+.father{    
+    font-family: 'Bodoni Moda', serif;
+    border: 1px solid rgba(0, 0, 0, 0.593);
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1));
+    max-width: 700px;
+    min-width: 600px;
+    max-height: 35rem;
+    min-height: 15rem;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 20rem;
+    border-radius: 20px;    
+    padding-bottom: 1rem;
+}
+
 .main{
     display: flex;    
+    justify-content: center;    
 }
-.day{
-    margin: 15px;
-    background-color: rgb(128, 128, 128, 0.5);
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0px 0px 3px black;
+
+.day{    
+    font-family: 'Teko', sans-serif;
+    /* -webkit-backdrop-filter: blur(8px); */
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.719);    
+    margin-left: 9.5px;
+    margin-right: 9.5px;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    border-radius: 15px;
+    padding: 9px;
+    box-shadow: 0px 0px 3px rgb(4, 4, 4);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
+    font-size: 22px;   
 
-    text-shadow: 0px 0px 1px white;
-    font-size: 13px;
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	
+    font-weight: 700;
+    text-align: center;     
+    margin-top: 1rem;
+    margin-bottom: -.2rem;
 }
-.cityInfo{
-    padding-left: 15px;
+
+.date{
+    text-align: center;
+}
+
+.finalDate{   
+    -webkit-backdrop-filter: blur(8px); /* Safari 9+ */
+    backdrop-filter: blur(8px); /* Chrome and Opera */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    align-items: center; 
+    color: rgba(0, 0, 0, 0.358);  
+    transition: 400ms; 
+}
+
+.finalDate:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.758); 
+}
+
+.finalDate div{
+    margin-bottom: .4rem;    
+    padding-left: .2rem;
+    padding-right: .2rem;
+    font-size: smaller;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* color: rgba(0, 0, 0, 0.549) */
+}
+
+.cityInfo{      
+    font-family: 'Teko', sans-serif;
+
+    /* font-family: 'Anton', sans-serif; */    
+
+    /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg); */
+
+    /* background-image: url(https://media.istockphoto.com/vectors/pixel-rain-fall-abstract-texture-dark-background-vector-id1344071288?s=2048x2048); */
+
+    /* background-image: url(https://images.unsplash.com/photo-1518803194621-27188ba362c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80); */
+
+    /* background-image: url(https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80); */
+    
+    /* background-image: url(https://images.unsplash.com/photo-1469122312224-c5846569feb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80); */
+
+    -webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.2px black;
+    
+    background-size: contain;
+	background-attachment: unset;
+	background-position: initial;	
+    
+	font-size: 35px;
+    font-weight: 700;
+    text-align: center; 
+    margin-top: 1rem;
+    margin-bottom: -.2rem;    
+
+	animation: clouds-moving infinite 220s;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	animation-timing-function: linear;    
+}
+
+.cityInfoBg{
+    /* align-items: center; */
+    height: 45px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+@keyframes clouds-moving {
+	0% {
+		background-position: 0%;	
+	}
+    12%{
+        background-position: 25%;
+    }
+    25% {
+		background-position: 50%;	
+	}
+    37% {
+		background-position: 75%;	
+	}
+	50% {
+		background-position: 100%;	
+	}
+    62%{
+        background-position: 75%;
+    }
+    75%{
+        background-position: 50%;
+    }
+    87%{
+        background-position: 25%;
+    }
+	100% {
+		background-position: 0%;
+	}
 }
